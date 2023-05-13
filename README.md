@@ -4,7 +4,7 @@ This project is a Unity game created for my Dio course. It features a single-pla
 
 The game is built using various game development concepts, including Shader Graphs, Unity Particle System, State Machines, physics and math for games. The game also features a custom-made third-person character controller supported by Cinemachine, making the gameplay even more immersive.
 
-## Getting Started
+## Play it!
 
 Play the WebGL Verison here:
 
