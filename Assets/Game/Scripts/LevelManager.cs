@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField]GameObject gameManagerPrefab;
     [SerializeField] AudioSource levelMusic;
 
-    [SerializeField] int musicVolume;
+    [SerializeField] int musicVolume=0;
     private void Awake() {
         if(!GameManager.Instance) 
             Instantiate(gameManagerPrefab); 
@@ -23,7 +23,8 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(musicVolume<1) TurnMusicOff();
+        if(musicVolume<1) TurnMusicON();
+        else TurnMusicOff();
         GameManager.Instance.SetCurrentLevel(this);
         maxScore =PlayerPrefs.GetInt(levelName);
     }
@@ -64,15 +65,16 @@ public class LevelManager : MonoBehaviour
     {
         if(musicVolume>0)
         {
-            PlayerPrefs.SetInt("musicVol",0);
             musicVolume = 0;
-            TurnMusicOff();
+            PlayerPrefs.SetInt("musicVol",musicVolume);
+            
+            TurnMusicON();
         }
         else
         {
-            PlayerPrefs.SetInt("musicVol",100);
             musicVolume =100;
-            TurnMusicON();
+            PlayerPrefs.SetInt("musicVol",musicVolume);
+            TurnMusicOff();
         } 
     }
 }

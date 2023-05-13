@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     public enum GameStates{Active, Paused, GameOver }
 
     public GameStates currentState = GameStates.Active; 
-    bool musicOn = true;
     public LevelManager currentLevel{get; private set;}
     // Start is called before the first frame update
     [Tooltip("DONT CHANGE IT. For Inspection only.")]
