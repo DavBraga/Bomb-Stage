@@ -1,4 +1,4 @@
-#Unity Project - Bomb Stage
+# Unity Project - Bomb Stage
 
 This project is a Unity game created for my Dio course. It features a single-player adaptation of a Stumble Guys stage, providing an exciting and enjoyable gaming experience.
 
